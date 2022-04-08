@@ -108,8 +108,8 @@ echo -e"\naInstall & configure Maven build tool on Jenkins\n"
     cd /opt/maven
  echo -e "\ndownloading maven\n"
     sleep 3
-    wget https://dlcdn.apache.org/maven/maven-3/3.8.4/binaries/apache-maven-3.8.4-bin.tar.gz --no-check-certificate
-    tar -xvzf apache-maven-3.8.4-bin.tar.gz
+    wget https://dlcdn.apache.org/maven/maven-3/3.8.5/binaries/apache-maven-3.8.5-bin.tar.gz --no-check-certificate
+    tar -xvzf apache-maven-3.8.5-bin.tar.gz
 sleep 3
 echo
 usage
@@ -117,7 +117,7 @@ usage
 echo -e "\nsetting up maven and java path please wait....\n"
     sleep 3
     
-sed -i '9i M2_HOME=/opt/maven/apache-maven-3.8.4' ~/.bash_profile
+sed -i '9i M2_HOME=/opt/maven/apache-maven-3.8.5' ~/.bash_profile
 sed -i '10i M2=$M2_HOME/bin' ~/.bash_profile
 sed -i '11i JAVA_HOME=/usr/lib/jvm/java-11-openjdk-11.0.14.1.1-1.el7_9.x86_64' ~/.bash_profile
 sed -i 's#PATH=$PATH:$HOME/bin#PATH=$PATH:$HOME/bin:$JAVA_HOME:$M2_HOME:$M2#g' ~/.bash_profile
